@@ -1,8 +1,9 @@
 import { Router } from "express";
-import { login } from "./services/UserService.js";
 
-const router = Router();
-router.get('/', (req, res) => res.json({message: "Hello world"}));
-router.post('/login', login);
+const routes = Router();
 
-export default router;
+routes.get("/", (req, res) => {
+  return res.json({ mensagem: "Alô mundo!!!" });
+});
+
+export default routes;
