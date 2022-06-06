@@ -1,6 +1,6 @@
 import { EntitySchema } from "typeorm";
 
-const Message = new EntitySchema({
+export const Message = new EntitySchema({
   name: "Message",
   tableName: "messages",
   columns: {
@@ -10,11 +10,10 @@ const Message = new EntitySchema({
       generated: true,
     },
     content: {
-        type: "text"
+      type: "text",
     },
     viewed: {
-        type: "boolean"
-    }
+      type: "boolean",
+    },
   },
 });
-
